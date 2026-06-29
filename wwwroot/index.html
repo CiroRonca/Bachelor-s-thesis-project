@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Descrizione Immagine</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Image Description</h2>
+
+        <!-- Form upload -->
+        <form id="uploadForm" novalidate>
+            <input id="image" type="file" accept="image/*">
+            <textarea id="text" placeholder="Scrivi un messaggio..."></textarea>
+            <button type="submit" id="submitBtn" disabled>Invia</button>
+        </form>
+
+
+        <!-- Sezione anteprima + descrizioni -->
+        <div id="resultContainer" class="hidden result-container">
+            <div class="preview-box">
+                <img id="previewImage" src="" alt="Anteprima immagine">
+            </div>
+            <div class="description-box">
+                <p id="result">Nessuna descrizione</p>
+                <button id="toggleMessages" class="hidden">Mostra dettagli</button>
+                <div id="messagesBox" class="hidden extra-info">
+                    <p id="azureDescription"></p>
+                    <p id="clarifaiTags"></p>
+                    <p id="clarifaiColors"></p>
+                    <p id="userMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up errori -->
+    <div id="errorPopup" class="error-popup hidden">
+        <span id="closeErrorPopup" class="close">&times;</span>
+        <p id="errorMessage"></p>
+    </div>
+
+    <!-- Galleria immagini salvate -->
+    <div class="gallery-container">
+        <h3>Galleria immagini salvate</h3>
+        <div class="gallery" id="gallery"></div>
+    </div>
+
+    <script src="js/main.js?v=2"></script>
+</body>
+</html>
